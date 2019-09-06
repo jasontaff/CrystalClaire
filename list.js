@@ -94,18 +94,21 @@ function sendEmail() {
        
         for (var j = 0; j < items.length; j++) {
           value =  items[j].children[1].value;
-          console.log(items[j].children[1]);
+       
             if (value > 0) {bodyTemplate = bodyTemplate   + '%0A' ;}
             if(value > 0) {
                 label = items[j].children[0].innerHTML;
                 com1 = items[j].children[2].value;
-                if(com1)
                // title = items[j].parentElement.previousElementSibling
-                bodyTemplate = bodyTemplate  +"Quantity: "+ value + "          "+"Product: " + label +"                     " +"Comments: "+ com1 +'%0A%0A';
+               console.log(com1);
+               if(com1 != ""){
+                bodyTemplate = bodyTemplate   +"Product: "+ label + "          "+"Quantity: " + value +"                      " + "Comments: "+ com1 +'%0A';
+               }else{
+                bodyTemplate = bodyTemplate   +"Product: "+ label + "          "+"Quantity: " + value +"                     "  +'%0A';
+               }
+              
 
-                else{
-                    bodyTemplate = bodyTemplate  +"Quantity: "+ value + "          "+"Product: " + label +"                     "  +'%0A%0A';
-                }
+               
             }
         }
          bodyTemplate = bodyTemplate  +'%0A';
