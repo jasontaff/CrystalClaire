@@ -1,0 +1,32 @@
+img{
+    width: 100%;
+}
+
+.category{
+    background-color: #66a3ff;
+    border-radius: 5px;
+    text-align: center;
+    
+}
+.product{
+    position: relative;
+    display: block;
+    padding: 10px 15px;
+    margin-bottom: -1px;
+    background-color: #fff;
+    border: 1px solid #ddd; 
+}
+
+.product label{
+    text-transform: uppercase;
+}
+.product input{
+    float: right;
+}
+
+@media only screen and (max-width: 640px) {
+    .product label{
+       font-size: 12px;
+       width: 75%;
+    }
+}
