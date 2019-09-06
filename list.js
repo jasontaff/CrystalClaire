@@ -99,8 +99,13 @@ function sendEmail() {
             if(value > 0) {
                 label = items[j].children[0].innerHTML;
                 com1 = items[j].children[2].value;
+                if(com1)
                // title = items[j].parentElement.previousElementSibling
-                bodyTemplate = bodyTemplate  +"Quantity: "+ value + "          "+"Product: " + label +"                     " +"Comments: "+ com1 +'%0A';
+                bodyTemplate = bodyTemplate  +"Quantity: "+ value + "          "+"Product: " + label +"                     " +"Comments: "+ com1 +'%0A%0A';
+
+                else{
+                    bodyTemplate = bodyTemplate  +"Quantity: "+ value + "          "+"Product: " + label +"                     "  +'%0A%0A';
+                }
             }
         }
          bodyTemplate = bodyTemplate  +'%0A';
