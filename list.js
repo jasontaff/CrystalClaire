@@ -82,7 +82,7 @@ function sendEmail() {
     var title;
     var value;
     var html;
-    var com1;
+    
     
     var nodeNames = [];
     
@@ -98,14 +98,13 @@ function sendEmail() {
             if (value > 0) {bodyTemplate = bodyTemplate   + '%0A' ;}
             if(value > 0) {
                 label = items[j].children[0].innerHTML;
-                com1 = items[j].children[2].value;
+               
                // title = items[j].parentElement.previousElementSibling
-               console.log(com1);
-               if(com1 != ""){
-                bodyTemplate = bodyTemplate   +"Product: "+ label + "          "+"Quantity: " + value +"                      " + "Comments: "+ com1 +'%0A';
-               }else{
-                bodyTemplate = bodyTemplate   +"Product: "+ label + "          "+"Quantity: " + value +"                     "  +'%0A';
-               }
+            
+              
+                bodyTemplate = bodyTemplate   +"Product: "+ label + "  "+"Quantity: " + value +" " +'%0A';
+          
+               
               
 
                
