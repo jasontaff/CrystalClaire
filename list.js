@@ -95,7 +95,7 @@ function sendEmail() {
         for (var j = 0; j < items.length; j++) {
           value =  items[j].children[1].value;
           console.log(items[j].children[1]);
-            if (value > 0) {bodyTemplate = bodyTemplate  + sectionTitle + '%0A' ;}
+            if (value > 0) {bodyTemplate = bodyTemplate   + '%0A' ;}
             if(value > 0) {
                 label = items[j].children[0].innerHTML;
                 com1 = items[j].children[2].value;
